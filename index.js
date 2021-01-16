@@ -1,6 +1,6 @@
-import { JSFuck } from 'jsfuck';
-import walk from 'acorn-walk';
-import { generate } from 'astring';
+const { JSFuck } = require('jsfuck');
+const walk = require('acorn-walk');
+const { generate } = require('astring');
 
 const DEFAULT_OPTIONS = {
 	wrapWithEval: true,
@@ -11,7 +11,7 @@ const ESM_INIT_DECLARATIONS = 'const g=globalThis';
 const ESM_GLOBAL = 'g._f_';
 const ESM_GLOBAL_ISOLATED = 'globalThis._f_';
 
-export default (pluginOptions = DEFAULT_OPTIONS) => ({
+module.exports = (pluginOptions = DEFAULT_OPTIONS) => ({
 	name: 'jsfuck-rollup-plugin',
 	generateBundle(options, bundle) {
 		pluginOptions = {
@@ -149,8 +149,6 @@ function extractESMExports(ctx, code) {
 
 		const lefts = extractIndexToAssignmentsIndexMap[i].map((index) => assignmentLefts[index]);
 		const rights = extractIndexToAssignmentsIndexMap[i].map((index) => assignmentRights[index]);
-
-		console.log(lefts, rights);
 
 		if (lefts == null
 			|| rights == null) {
