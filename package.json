@@ -1,11 +1,11 @@
 {
-  "name": "jsfuck-rollup-plugin",
+  "name": "rollup-plugin-jsfuck",
   "version": "1.0.0",
   "description": "A rollup plugin to fuck you up",
   "repository": {
-    "url": "https://github.com/Sxxov/jsfuck-rollup-plugin"
+    "url": "https://github.com/Sxxov/rollup-plugin-jsfuck"
   },
-  "homepage": "https://github.com/Sxxov/jsfuck-rollup-plugin#readme",
+  "homepage": "https://github.com/Sxxov/rollup-plugin-jsfuck#readme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
