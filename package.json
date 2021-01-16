@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-jsfuck",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A rollup plugin to fuck you up",
   "repository": {
     "url": "https://github.com/Sxxov/rollup-plugin-jsfuck"
