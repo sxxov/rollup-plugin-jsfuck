@@ -30,6 +30,10 @@ module.exports = (pluginOptions = DEFAULT_OPTIONS) => ({
 		}
 
 		Object.values(bundle).forEach((bundlePart) => {
+			if (!bundlePart.isEntry) {
+				return;
+			}
+
 			let key;
 
 			switch (bundlePart.type) {
