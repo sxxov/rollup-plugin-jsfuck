@@ -29,7 +29,13 @@ export default {
     plugins: [
     	// ...
     
-    	jsfuck();
+    	jsfuck({
+            // plugin settings with their default values
+    
+            wrapWithEval: true, // true to wrap emitted code in an eval statement
+            runInParentScope: true, // false to wrap emitted code in an iife
+            exclude: [], // an array of glob strings
+        });
     ]
 }
 ```
