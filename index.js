@@ -1,10 +1,12 @@
 const { JSFuck } = require('jsfuck');
 const walk = require('acorn-walk');
 const { generate } = require('astring');
+const glob = require('glob');
 
 const DEFAULT_OPTIONS = {
 	wrapWithEval: true,
 	runInParentScope: true,
+	exclude: '',
 };
 const ESM_FUNCTION_WRAPPER_NAME = 'fuck';
 const ESM_INIT_DECLARATIONS = 'const g=globalThis';
@@ -42,6 +44,11 @@ module.exports = (pluginOptions = DEFAULT_OPTIONS) => ({
 				}
 				case 'chunk': {
 					key = 'code';
+
+					if (pluginOptions.exclude
+						&& glob.sync(pluginOptions.exclude, bundle.fileName).length > 0) {
+						return;
+					}
 
 					break;
 				}

@@ -24,6 +24,7 @@
   "dependencies": {
     "acorn-walk": "^8.0.1",
     "astring": "^1.6.0",
+    "glob": "^7.1.6",
     "jsfuck": "^0.4.0"
   },
   "devDependencies": {
