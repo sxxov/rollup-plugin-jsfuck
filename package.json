@@ -1,12 +1,24 @@
 {
   "name": "jsfuck-rollup-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "A rollup plugin to fuck you up",
+  "repository": {
+    "url": "https://github.com/Sxxov/jsfuck-rollup-plugin"
+  },
+  "homepage": "https://github.com/Sxxov/jsfuck-rollup-plugin#readme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "jsfuck",
+    "rollup",
+    "plugin",
+    "minfy",
+    "uglify",
+    "meme",
+    "bruh"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
