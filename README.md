@@ -1,4 +1,4 @@
-# JSFuck Rollup Plugin
+# Rollup Plugin JSFuck
 
 A plugin that enables you to integrate [JSFuck](https://jsfuck.com) into your [Rollup](https://github.com/rollup/rollup) workflow.
 
@@ -72,5 +72,5 @@ The plugin will (attempt to) modify the original code, then add some of its own 
 
 ## Contributing
 
-* Please don't
-* Invest in a hobby
+* Please don't.
+* Go invest in a hobby.
