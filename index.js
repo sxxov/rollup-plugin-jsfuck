@@ -157,6 +157,20 @@ function extractESMExports(ctx, code) {
 		},
 	});
 
+	// if it's not exporting anything, just run it
+	if (nodesToBeExtracted.length === 0) {
+		return {
+			exports,
+			code: generate(ast, {
+				indent: '',
+				lineEnd: '',
+			}),
+			declarations,
+			declarationsInESMFunction,
+			cleanups: ['fuck();'],
+		};
+	}
+
 	nodesToBeExtracted.forEach((node, i) => {
 		exports.push(generate(node).replace(/;$/, ''));
 
