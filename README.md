@@ -18,7 +18,7 @@ Example rollup config:
 
 ```js
 // rollup.config.js
-import jsfuck from 'jsfuck-rollup-plugin';
+import jsfuck from 'rollup-plugin-jsfuck';
 
 export default {
     input: './foo.js',
